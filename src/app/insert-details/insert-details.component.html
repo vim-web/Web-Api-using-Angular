@@ -1,0 +1,23 @@
+<h1>Insert Details</h1>
+<div>
+    <div>
+        <label>Name:
+            <input type="text" [(ngModel)]="userData.name" placeholder="Name" id="uname" name="uname" required #uname="ngModel"/>
+            <span *ngIf="uname.invalid" class="text-danger">
+                *
+                <!-- Error message can be placed here -->
+            </span>
+            
+        </label><br>
+        <label>Age:
+            <input type="number" [(ngModel)]="userData.age" placeholder="Age" [min]="18" [max]="80"/>
+
+        </label><br>
+        <label>Mark:
+            <input type="number" [(ngModel)]="userData.mark" placeholder="Mark"/>
+
+        </label><br>
+
+    </div>
+    <button (click)="adduserdata()">Save</button>
+</div>

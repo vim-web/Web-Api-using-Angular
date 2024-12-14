@@ -1,0 +1,13 @@
+<h2>
+    student Details
+</h2>
+<div *ngIf="student">
+    <h3>{{student.name | uppercase}} Details</h3>
+    <div><span>age: </span>{{student.age}}</div>
+    <div><span>mark: </span>{{student.mark}}</div>
+    <div>
+<button routerLink="/editdetails/{{student.id}}">
+    Edit
+</button>
+    </div>
+</div>
